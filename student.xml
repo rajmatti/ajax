@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<STUDENT-INFO>
+<STUDENT>
+<NAME>Jai</NAME>
+<CLASS>Electronics</CLASS>
+</STUDENT>
+<STUDENT>
+<NAME>Sachin</NAME>
+<CLASS>Computer Science</CLASS>
+</STUDENT>
+<STUDENT>
+<NAME>Naren</NAME>
+<CLASS>Mechanical</CLASS>
+</STUDENT>
+<STUDENT>
+<NAME>Vivek</NAME>
+<CLASS>Electrical</CLASS>
+</STUDENT>
+<STUDENT>
+<NAME>Sahil</NAME>
+<CLASS>Industrial Production</CLASS>
+</STUDENT>
+</STUDENT-INFO>
