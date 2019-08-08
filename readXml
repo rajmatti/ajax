@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="table.css">
+  </head>
+<body>
+ 
+<h2>Ajax XML Example</h2>
+ 
+<button type="button" onclick="loadXMLDoc()">Get Student Info</button>
+<br><br>
+<table id="test"></table>
+ 
+<script>
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      dataLoadFunction(this);
+    }
+  };
+  xhttp.open("GET", "student.xml", true);
+  xhttp.send();
+}
+
+function dataLoadFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Name</th><th>Class</th></tr>";
+  var x = xmlDoc.getElementsByTagName("STUDENT");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("CLASS")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("test").innerHTML = table;
+}
+</script>
+ 
+</body>
+</html>
