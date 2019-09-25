@@ -11,7 +11,7 @@
               text = document.getElementById("textTarget");
           for (i in players) {
             var newDiv = document.createElement("div");
-            newDiv.innerHTML = players[i].playerOne;
+            newDiv.innerHTML = players[i].playerOne + ' ->'+players[i].playerTwo+'->'+players[i].playerThree;
             text.appendChild(newDiv);
           }
         }
